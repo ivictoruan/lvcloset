@@ -75,10 +75,16 @@ WSGI_APPLICATION = 'lojacloset.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'lanchonetetopfoodlanches',
+        'USER': 'postgres',
+        'PASSWORD': '$1234',
+        'HOST': '',
+        'PORT': '',
+        'CONN_MAX_AGE': 500, #Constantly opening new connections is an expensive operation,
     }
 }
+
 
 
 # Password validation
